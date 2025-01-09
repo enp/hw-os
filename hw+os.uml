@@ -1,0 +1,13 @@
+@startmindmap
+top to bottom direction
++ BootLoader
+++ Linux:\n\n * kernel + initrd\n * root filesystem + init process (pid 0)
++++ AAA:\n\n * Users/Groups via NSS/PAM \n * DAC (owner + capabilities)\n * MAC (selinux + apparmor)\n * su + sudo + pkexec
++++ FHS over disks/partitions:\n\n * root: /\n * system: /usr /etc /var /srv\n * user: /root /home /mnt /media\n * runtime: /tmp /run /dev /sys /proc
+++++ Additional programs:\n\n * System-wide (via package manager)\n * Ecosystem-specific (pip/npm/gem/...)\n * Fakeroot (including chroot + namespaces/containers)\n * Local bin directory with executable binaries / scripts
++++ Processes:\n\n * Background services\n * TTY + Login shell (with bash + vim/emacs + mc)\n * GUI (X11 + Wayland)\n * DM + WM + DE (with terminal + browser)
+-- MotherBoard
+--- Compute:\n\n * CPU\n * GPU
+--- Memory:\n\n * NVRAM\n * RAM\n * HDD/SSD\n * Removable
+--- I/O:\n\n * Serial console\n * Keyboard/Mouse/Display\n * Network
+@endmindmap
